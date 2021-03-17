@@ -31,6 +31,7 @@ public class GetShortenUrlServiceImpl implements GetShortenUrlService {
             // 등록된 Shorten URL 없는 경우 신규 등록
             ShortenUrl newShortenUrl = enrollShortenUrlService.enrollShortenUrl(originalUrl);
 
+            log.info("URL 완료 : {} -> {}", newShortenUrl.getOriginalUrl(), newShortenUrl.getShortenUrl());
             return newShortenUrl;
         }
     }

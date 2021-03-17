@@ -29,6 +29,13 @@
     ```
 
 ----
+## TODO
+- 개발환경
+- Test 방법
+- Test 코드 범위
+- 빌드 및 배포 방법 
+
+    `주의 : ( docker-compose.yaml > Redis & SHORTEN_URL_REDIRECT_SERVER_DNS 서버 IP로 변경 필요 )`
 
 ## (+본인추가) 제한사항
 - 입력값은 URL인 경우에만 입력 가능.
@@ -37,21 +44,56 @@
 - CentOS
 1. yum 패키지 업데이트
 
-    ```
+    ```shell script
     $ yum -y update
     ```
 
 2. Docker 설치
 
-    ```
+    ```shell script
     $ yum -y install docker
     ```
+   
+3. Docker compose 설치
+
+    ```shell script
+    # docker-compose 설치
+    $ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    
+    # docker-compose 실행 권한 부여
+    $ sudo chmod +x /usr/local/bin/docker-compose
+   
+    # 설치된 docker-compose 실행 확인
+    $ docker-compose --version
+   ```
+4. Maven 설치
+
+    ```shell script
+    $ wget http://mirror.apache-kr.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+    $ wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+    $ tar -xvf apache-maven-3.6.3-bin.tar.gz
+    $ ln -s apache-maven-3.6.3 maven
+   ``` 
+   ```
+   $ vi ~/.bash_profile 
+   
+   (in vi editor)
+       export MAVEN_HOME=/usr/local/maven
+       PATH=$PATH:$HOME/bin:$MAVEN_HOME/bin
+       export PATH
+   
+   $ source ~/.bash_profile
+   ```   
+
+## Git Clone
+`sudo git clone https://github.com/TonyJev93/URL-Shortener.git`   
 
 ## Redis Docker 실행
 
 ```
 $ docker  run --name redis -d -p 6379:6379 redis
 ```
+
 
 ## 주의사항
 
