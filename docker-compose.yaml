@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  urlshortener.service:
+    image: tonyjev/urlshortener
+    environment:
+      - LOCAL_REDIS_HOST=localhost
+      - LOCAL_REDIS_PORT=63790
+      - SHORTEN_URL_REDIRECT_SERVER_DNS=http://localhost:8080
+      - SHORTEN_URL_REDIRECT_SERVICE_PATH=shorten-url/redirect
+      - SHORTEN_URL_MAX_LENGTH=8
+    ports:
+      - "8080:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"

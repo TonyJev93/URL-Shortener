@@ -1,7 +1,0 @@
-[source,bash]
-----
-$ echo '{
-  "url" : "https://en.wikipedia.org/wiki/URL_shortening"
-}' | http POST 'http://localhost:8080/shorten-url' \
-    'Content-Type:application/x-www-form-urlencoded'
-----

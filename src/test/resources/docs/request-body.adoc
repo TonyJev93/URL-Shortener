@@ -1,6 +1,0 @@
-[source,options="nowrap"]
-----
-{
-  "url" : "https://en.wikipedia.org/wiki/URL_shortening"
-}
-----
