@@ -1,0 +1,33 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Language: en
+Content-Type: text/html;charset=UTF-8
+Content-Length: 625
+
+<h1>URL Shorthen Service</h1>
+<div>
+    <div>
+
+        <form action="/shorten-url" name="shortenUrl" method="POST">
+            <input type="text" name="url"/>
+            <input type="submit" value="Get Shorten URL"/>
+        </form>
+    </div>
+    <div>
+            입력 URL : <span id="shortenUrl">https://en.wikipedia.org/wiki/URL_shortening</span>
+    </div>
+    <div>
+            단축 URL : <span id="shortenUrl">http://localhost:8080/shorten-url/redirect/1</span>
+    </div>
+    <div>
+            요청 횟수 : <span id="requestCnt">1</span>
+    </div>
+    <div>
+    </div>
+
+
+</div>
+<br>
+
+----

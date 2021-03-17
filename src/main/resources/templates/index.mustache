@@ -1,0 +1,33 @@
+<h1>URL Shorthen Service</h1>
+<div>
+    <div>
+
+        <form action="/shorten-url" name="shortenUrl" method="POST">
+            <input type="text" name="url"/>
+            <input type="submit" value="Get Shorten URL"/>
+        </form>
+    </div>
+    <div>
+        {{#originalUrl}}
+            입력 URL : <span id="shortenUrl">{{originalUrl}}</span>
+        {{/originalUrl}}
+    </div>
+    <div>
+        {{#shortenUrl}}
+            단축 URL : <span id="shortenUrl">{{shortenUrl}}</span>
+        {{/shortenUrl}}
+    </div>
+    <div>
+        {{#requestCnt}}
+            요청 횟수 : <span id="requestCnt">{{requestCnt}}</span>
+        {{/requestCnt}}
+    </div>
+    <div>
+        {{#errorMsg}}
+            Error Msg : <span id="errorMsg">{{errorMsg}}</span>
+        {{/errorMsg}}
+    </div>
+
+
+</div>
+<br>

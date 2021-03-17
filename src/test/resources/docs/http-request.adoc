@@ -1,0 +1,11 @@
+[source,http,options="nowrap"]
+----
+POST /shorten-url HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 62
+Host: localhost:8080
+
+{
+  "url" : "https://en.wikipedia.org/wiki/URL_shortening"
+}
+----
