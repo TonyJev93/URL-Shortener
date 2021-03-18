@@ -130,6 +130,16 @@ $ ./buildAndDeploy.sh
 > 빌드 완료 후에는 **./deploy.sh** 혹은 **docker-compose up -d** 명령어를 통해 배포만으로 서버구동 가능
 
 
+### 스크립트로 빌드/배포 안될 경우 (Docker / Docker Compose 설치 필요 없음)
+
+```
+$ mvn clean
+$ mvn package
+$ cd ./target
+$ nohup java -jar urlshortener-0.0.1-SNAPSHOT.jar &
+```
+
+
 ## 3. 테스트 방법
 
 ### 테스트 순서
