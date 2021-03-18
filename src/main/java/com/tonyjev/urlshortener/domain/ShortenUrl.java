@@ -13,7 +13,6 @@ import java.io.Serializable;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @RedisHash("shortenUrl")
 @Slf4j
-// TODO : Resis DATA 단점 정리. ( 클래스 변화(field type)가 생기면 역직렬화에 문제 발생 가능 )
 public class ShortenUrl implements Serializable {
 
     // field 추가 or 제거에 따른 역직렬화 불가능 문제해결을 위해 UID 지정.( -> but, field type 변경 시에는 역직렬화 오류 발생 )
