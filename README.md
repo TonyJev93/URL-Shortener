@@ -72,14 +72,14 @@ $ docker  run --name redis -d -p 63790:6379 redis
 
 
 ### 1. Git clone 받은 프로젝트 Path로 이동
-	```
-	$ cd {git-path}/URL-Shortener
-	```
+```
+$ cd {git-path}/URL-Shortener
+```
 
 ### 2.  빌드 & 배포 스크립트 실행
-	```
-	$ ./buildAndDeploy.sh
-	```
+```
+$ ./buildAndDeploy.sh
+```
 
 #### 2. 1. 스크립트 구성
 **1. ./build.sh**
